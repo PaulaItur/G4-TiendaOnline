@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Función para cargar las zapatillas en la tabla
     function cargarTablaZapatillas() {
         let tablaZapatillas = document.getElementById("tablaZapatillas");
-        tablaZapatillas.innerHTML = `<tr><th>Nombre</th><th>Precio</th><th>Imagen</th></tr>`; // Encabezados de la tabla
-
+        // Encabezados de la tabla
+        tablaZapatillas.innerHTML = `<tr><th>Nombre</th><th>Precio</th><th>Imagen</th></tr>`; 
+        //Bucle que mete las zapatillas del array en la tabla
         zapatillas.forEach(zapatilla => {
             tablaZapatillas.innerHTML += `
                 <tr>
