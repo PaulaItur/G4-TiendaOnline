@@ -1,0 +1,132 @@
+/* Reset de márgenes y paddings para evitar inconsistencias entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo del header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal de la página */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la tabla de productos */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilo de los botones */
+button, .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+button:hover, .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del total y el carrito */
+.total {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+}
+
+#atras {
+    margin-top: 20px;
+    background-color: #28a745;
+    text-align: center;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    button, .btn {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+}
