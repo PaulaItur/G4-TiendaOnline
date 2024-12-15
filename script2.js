@@ -13,6 +13,32 @@ document.addEventListener("DOMContentLoaded", () => {
                 <td>${producto.cantidad}</td>
                 <td>${producto.precio}€</td>
                 <td>${subtotal}€</td>
+                <td><button class="eliminar" data-nombre="${producto.nombre}">Eliminar</button></td>
+            </tr>`;
+    });
+    document.getElementsByTagName("strong")[0].textContent = "Total: "+total+"€";
+
+    //creo una funcion para eliminar productos del carrito y recargar la pagina con los datos nuevos como el total
+    function eliminarDelCarrito(nombreProducto) {
+        //comparo el nombre producto para poder eliminar el producto correcto
+        const carritoActualizado = carrito.filter(producto => producto.nombre !== nombreProducto);
+        localStorage.setItem("carrito", JSON.stringify(carritoActualizado));
+        location.reload();
+    }
+    //añado los eventos eliminar para que la recarga funcione bien
+    function asignarEventosEliminar() {
+        const botonesEliminar = document.querySelectorAll(".eliminar");
+        botonesEliminar.forEach((boton) => {
+            boton.addEventListener("click", (event) => {
+                const nombreProducto = event.target.getAttribute("data-nombre");
+                eliminarDelCarrito(nombreProducto);
+            });
+        });
+    }
+//llamo a la funcion para añadir el evento eliminar
+    asignarEventosEliminar();
+
+
             </tr>`;
     });
     document.getElementsByTagName("strong")[0].textContent = "Total: "+total+"€";
