@@ -38,10 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 //llamo a la funcion para añadir el evento eliminar
     asignarEventosEliminar();
 
-
-            </tr>`;
-    });
-    document.getElementsByTagName("strong")[0].textContent = "Total: "+total+"€";
     function irAIndex() {
         window.location.href = "index.html";
     }
