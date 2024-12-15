@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="script2.js"></script>
+    <header>
+        <h1>Carrito de Compras</h1>
+    </header>
+    <button id="atras">Atras</button>
+    <div class="container">
+        <h2>Productos Seleccionados</h2>
+        <table id="tablaCarrito">
+
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Subtotal</th>
+                <th>Modificar</th>
+            </tr>
+            <tr>
+                <td>Producto 1</td>
+                <td>2</td>
+                <td>$10.00</td>
+                <td>$20.00</td>
+                <td><button class="eliminar" data-nombre="Producto 1">Eliminar</button></td>
+            </tr>
+            <tr>
+                <td>Producto 2</td>
+                <td>1</td>
+                <td>$15.00</td>
+                <td>$15.00</td>
+                <td><button class="eliminar" data-nombre="Producto 2">Eliminar</button></td>
+            </tr>
+
+
+        </table>
+        <div class="total">
+            <strong>Total: $35.00</strong>
+        </div>
+        <div>
+            <a href="checkout.html" class="btn">Proceder al Pago</a>
+        </div>
+    </div>
+</body>
+
+</html>
